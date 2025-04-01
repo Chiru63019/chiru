@@ -10,8 +10,8 @@ from Cryptodome.Util.Padding import unpad
 from subprocess import getstatusoutput
 
 def decrypt_encrypted_mpd_key(url):
-    key = b'638udh3829162018'
-    iv = b'fedcba9876543210'
+    key = b'^#^#&@*HDU@&@*()'
+    iv = b'^@%#&*NSHUE&$*#)'
     cipher = AES.new(key, AES.MODE_CBC, iv)
     ciphertext = base64.b64decode(url.encode('utf-8'))
     decrypted_data = cipher.decrypt(ciphertext)
